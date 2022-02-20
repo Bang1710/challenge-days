@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 5 - Generator Password</title>
+    <link rel="shortcut icon" href="https://image.shutterstock.com/image-vector/challenge-emblem-stylized-text-vector-260nw-1524875759.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="./main.css">
+</head>
+<body>
+    
+    <div class="container">
+        <div class="container-content">
+            <h2>Password Generator</h2>
+            <div class="container-input">
+                <div class="password-value"></div>
+                <button class="password-copy">Copy Password</button>
+            </div>
+            <ul>
+                <li>
+                    <label for="input-length">Password Length</label>
+                    <input type="number" value="10" min="8" max="20" id="input-length">
+                </li>
+                <li>
+                    <label for="input-upper">Include uppercase letters</label>
+                    <input type="checkbox" id="input-upper" checked>
+                </li>
+                <li>
+                    <label for="input-lower">Include lowercase letters</label>
+                    <input type="checkbox" id="input-lower" checked>
+                </li>
+                <li>
+                    <label for="input-number">Include numbers</label>
+                    <input type="checkbox" id="input-number" checked>
+                </li>
+                <li>
+                    <label for="input-symbol">Include symbols</label>
+                    <input type="checkbox" id="input-symbol" checked>
+                </li>
+            </ul>
+
+            <button class="btn-create">Create Password</button>
+        </div>
+    </div>
+
+    <script src="./main.js"></script>
+</body>
+</html>
