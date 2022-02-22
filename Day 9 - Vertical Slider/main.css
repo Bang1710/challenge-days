@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 62.5%;
+	font-family: "Poppins", sans-serif;
+}
+
+.container {
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	overflow: hidden;
+}
+
+.left.col-4,
+.right.col-8 {
+	width: 100%;
+	height: 100vh;
+	position: relative;
+}
+
+.down,
+.up {
+	cursor: pointer;
+	transition: all 0.3s linear;
+	position: absolute;
+	padding: 11px 14px;
+	font-size: 2.2rem;
+	border: none;
+	outline: none;
+	color: #aaaaaa;
+}
+
+.down {
+	top: 50%;
+	right: 0;
+	border-top-left-radius: 4px;
+	border-bottom-left-radius: 4px;
+	background-color: #ffffff;
+}
+
+.up {
+	bottom: 50%;
+	left: 0;
+	border-top-right-radius: 4px;
+	border-bottom-right-radius: 4px;
+	background-color: #ffffff;
+}
+
+.down:hover,
+.up:hover {
+	color: black;
+}
+
+.col-4 {
+	flex: 0 0 33.333333%;
+	max-width: 33.33333333%;
+}
+
+.col-8 {
+	flex: 0 0 66.6666667%;
+	max-width: 66.666666667%;
+}
+
+img {
+	width: 100%;
+	height: 100vh;
+	object-fit: cover;
+}
+
+.content,
+.img {
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	transition: transform 0.4s;
+	position: absolute;
+	top: 0;
+}
+
+.content {
+	justify-content: center;
+	color: white;
+	align-items: center;
+}
+
+.img {
+	transition: transform 0.4s;
+	display: flex;
+}
+
+h2 {
+	font-size: 4rem;
+	text-transform: capitalize;
+	font-weight: 500;
+}
+
+h4 {
+	font-size: 2.1rem;
+	font-weight: 400;
+	text-transform: capitalize;
+}
+
+.flower {
+	background-color: #fd3555;
+}
+
+.sky {
+	background-color: #2a86ba;
+}
+
+.castle {
+	background-color: #252e33;
+}
+
+.fly {
+	background-color: #ffb866;
+}
+
+.nature {
+	background-color: darkorange;
+}
+
