@@ -11,21 +11,27 @@ const months = ["January","February","March","April","May","June","July","August
 let urlAPI = "https://api.github.com/users/";
 
 async function getData(name) {
-	let user = await fetch(`${urlAPI}${name}`);
-
-    if (!user.ok) { //call api failed
-        const alert = 'No profile with this username';
-        throw new Error(alert);
+    try {
+        let user = await fetch(`${urlAPI}${name}`);
+        if (!user.ok) { //call api failed
+            const alert = 'No profile with this username';
+            throw new Error(alert);
+        }
+        let data = await user.json();
+        createCardUser(data);
+    } catch (error) {
+        createErrorCard(error.message);
     }
-
-	let data = await user.json();
-    return data;
 };
 
 async function getDataRepos(name) {
-    let repositories = await fetch(`${urlAPI}${name}/repos `);
-    let data = await repositories.json();
-    return data;
+    try {
+        let repositories = await fetch(`${urlAPI}${name}/repos `);
+        let data = await repositories.json();
+        getRepos(data);
+    } catch (error) {
+        console.log('Fail to call API repos');
+    }
 }
 
 function createCardUser(data) {
@@ -132,21 +138,9 @@ form.addEventListener("submit", (e) => {
 
 	if (userName) {
 		getData(userName)
-            .then((data) => {
-                createCardUser(data);
-            })
-            .catch(error => {
-                createErrorCard(error.message);
-            });
-
         getDataRepos(userName)
-            .then((data) => {
-                getRepos(data);
-            });
-         
-    
         search.value = "";
-	}
+	};
 });
 
 btn.addEventListener("click", function (e) {
@@ -154,18 +148,7 @@ btn.addEventListener("click", function (e) {
 	const userName = search.value;
 	if (userName) {
 		getData(userName)
-            .then((data) => {
-                createCardUser(data);
-            })
-            .catch(error => {
-                createErrorCard(error.message);
-            });
-
         getDataRepos(userName)
-            .then((data) => {
-                getRepos(data);
-            });
         search.value = '';
     }
 });
-

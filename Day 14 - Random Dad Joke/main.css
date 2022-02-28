@@ -1,0 +1,63 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 650px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 40px;
+    border-radius: 10px;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #686DE0;
+}
+
+h2 {
+    color: #808080;
+    margin: 0 0 10px 0;
+}
+
+.dad-joke {
+    font-size: 1.7rem;
+    text-align: center;
+    margin: 10px 0 16px;
+}
+
+button.btn {
+    margin: 30px 0 0;
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    outline: none;
+    color: white;
+    background-color: #9F68E0;
+    border: none;
+    cursor: pointer;
+}
+
+.id {
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    margin-right: 100px;
+    font-style: italic;
+    color: red;
+}
+
+
+
+
+

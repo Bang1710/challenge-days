@@ -31,7 +31,7 @@ createBtn.addEventListener('click', function() {
 function generatorPassword(lower, upper, number, symbol, length) {
     let resultGeneratorPassword = '';
     const typesCount = lower + upper + number + symbol;
-    const typesArr = [{lower}, {upper}, {number}, {symbol}].filter((item) => Object.values(item)[0]);
+    const typesArr = [{lower}, {upper}, {number}, {symbol}].filter((item) => Object.values(item)[0]); //Convert to boolean
 
     if(typesCount === 0) {
         return `Let's choose a option`;

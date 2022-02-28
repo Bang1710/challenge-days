@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #8E44AD;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.counter-container {
+    margin: 0 40px;
+    text-align: center;
+}
+
+i {
+    font-size: 4rem;
+    margin: 10px 0;
+}
+
+.counter {
+    margin: 10px 0;
+    font-size: 4rem;
+    letter-spacing: 2.3px;
+    font-weight: 800;
+}
+
+span {
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+}
