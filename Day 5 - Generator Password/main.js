@@ -1,21 +1,21 @@
-var $ = document.querySelector.bind(document)
-var $$ = document.querySelectorAll.bind(document)
+var $ = document.querySelector.bind(document);
+var $$ = document.querySelectorAll.bind(document);
 
-var result = $('.password-value')
-var copy = $('.password-copy')
-var length = $('#input-length')
-var upper = $('#input-upper')
-var lower = $('#input-lower')
-var number = $('#input-number')
-var symbol = $('#input-symbol')
-var createBtn = $('.btn-create')
+var result = $('.password-value');
+var copy = $('.password-copy');
+var length = $('#input-length');
+var upper = $('#input-upper');
+var lower = $('#input-lower');
+var number = $('#input-number');
+var symbol = $('#input-symbol');
+var createBtn = $('.btn-create');
 
 const randomFunc = {
     lower: getRandomLower,
     upper: getRandomUpper,
     number: getRandomNumber,
     symbol: getRandomSymbol
-}
+};
 
 
 createBtn.addEventListener('click', function() {
